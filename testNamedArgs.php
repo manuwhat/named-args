@@ -1,6 +1,6 @@
 <?php
-require_once('namedArgs.php');
-require_once('namedArgsHelper.php');
+require_once('./src/namedArgs.php');
+require_once('./src/namedArgsHelper.php');
 
 
 function codeWithoutRef(NamedArgs $mandatory)

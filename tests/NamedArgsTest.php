@@ -1,8 +1,8 @@
 <?php
 use PHPUnit\Framework\TestCase;
 
-require($DIR=($dir=dirname(__DIR__)).DIRECTORY_SEPARATOR.'src'.DIRECTORY_SEPARATOR).'namedArgsHelper.php';
-require $DIR.'namedArgs.php';
+require ($dir=dirname(__DIR__)).DIRECTORY_SEPARATOR.'src'.DIRECTORY_SEPARATOR.'namedArgsHelper.php';
+require $dir.DIRECTORY_SEPARATOR.'src'.DIRECTORY_SEPARATOR.'namedArgs.php';
 require $dir.DIRECTORY_SEPARATOR.'Args.php';
 use EZAMA\NamedArgs;
 
