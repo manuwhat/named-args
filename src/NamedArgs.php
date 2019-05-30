@@ -7,7 +7,7 @@ namespace EZAMA{
         public function __construct($mandatory)
         {
             if (!\is_array($mandatory)) {
-                throw new InvalidArgumentException(\sprintf('parameter type must be array, %s given', \gettype($mandatory)));
+                throw new \InvalidArgumentException(\sprintf('parameter type must be array, %s given', \gettype($mandatory)));
             }
             $this->parameters=$mandatory;
         }
@@ -40,7 +40,7 @@ namespace EZAMA{
             if (\version_compare(\PHP_VERSION, '7.0.0') < 0) {
                 \trigger_error($error, \E_USER_ERROR);
             } else {
-                throw new Error($error);
+                throw new \Error($error);
             }
         }
          
@@ -64,7 +64,7 @@ namespace EZAMA{
                 $function=\end($function);
                 $function=$function['function'];
                 $cm=\count($missing);
-                $error=\call_user_func_array('sprintf', array('Function  %s\'s  Required '.(($cm>1)?'parameters ':'parameter ').'%s '.(($cm>1)?'are':'is').' missing',$function,NamedArgs::format($missing)));
+                $error=\call_user_func_array('sprintf', array('Function  %s\'s  Required '.($cm>1?'parameters %s are':'parameter %s is').' missing',$function,NamedArgs::format($missing)));
                 self::throwError($error);
             }
             
@@ -134,12 +134,12 @@ namespace EZAMA{
         protected static function getReflection(&$func)
         {
             if (!\is_string($func)) {
-                throw new BadFunctionCallException('Try to call undefined Function');
+                throw new \BadFunctionCallException('Try to call undefined Function');
             }
             try {
                 $func = new \reflectionFunction($func);
-            } catch (ReflectionException $e) {
-                throw new BadFunctionCallException('Try to call undefined Function');
+            } catch (\ReflectionException $e) {
+                throw new \BadFunctionCallException('Try to call undefined Function');
             }
         }
         
