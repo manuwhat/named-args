@@ -7,7 +7,7 @@ namespace EZAMA{
         {
             foreach ($arr1 as $k=>$v) {
                 if (array_key_exists($k, $arr2)) {
-                    $arr1[$k]=&$arr2[$k];
+                    $arr1[$k] = &$arr2[$k];
                 }
             }
         }
@@ -17,8 +17,8 @@ namespace EZAMA{
             if (!\is_array($OneDarray)) {
                 return '';
             }
-            if (\count($OneDarray)>1) {
-                $end=array_pop($OneDarray);
+            if (\count($OneDarray) > 1) {
+                $end = array_pop($OneDarray);
                 return \join(',', $OneDarray)." and $end ";
             } else {
                 return array_pop($OneDarray);
@@ -27,7 +27,7 @@ namespace EZAMA{
         
         protected static function throwError($error)
         {
-            $error=(string)($error);
+            $error = (string) ($error);
             if (\version_compare(\PHP_VERSION, '7.0.0') < 0) {
                 \trigger_error($error, \E_USER_ERROR);
             } else {
@@ -41,7 +41,7 @@ namespace EZAMA{
                 return \false;
             }
             foreach ($array as $k=>$v) {
-                if (!\preg_match('#^[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*$#', (string)$k)) {
+                if (!\preg_match('#^[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*$#', (string) $k)) {
                     return \false;
                 }
             }
