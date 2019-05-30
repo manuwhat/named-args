@@ -6,7 +6,7 @@
 	    "function",
         "parameter",
 		"argument",
-		"named-arguments",
+		"named-arguments"
     ],
     "homepage": "https://github.com/manuwhat/named-args",
     "license": "MIT",
