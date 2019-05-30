@@ -1,0 +1,36 @@
+{
+    "name": "manuwhat/named-args",
+    "type": "library",
+    "description": "name-args - Allow to (define functions that can be called/call existing functions)  using named Arguments",
+    "keywords": [
+	    "function",
+        "parameter",
+		"argument",
+		"named-arguments",
+    ],
+    "homepage": "https://github.com/manuwhat/named-args",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Akpé Aurelle Emmanuel Moïse Zinsou",
+            "email": "leizmo@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^6.5.0"
+    },
+   
+    "autoload": {
+        "psr-4": {
+            "EZAMA\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "EZAMA\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        
+    }
+}
